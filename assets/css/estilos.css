@@ -1,0 +1,87 @@
+/*
+@import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+*/
+
+/*   body {
+      color:   */
+}
+
+/*reset de css a html*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html body {
+    height: 100%;
+}
+
+
+
+body {
+    font-family: sans-serif;
+    font-size: 1.2em;
+    min-height: 100%;
+
+}
+
+.contenedor > * {
+    box-shadow: -1px 1px 0px rgba(0, 0, 0, 1.0);
+    text-align: center;
+    padding: 100px;
+    border-radius: 15px;
+    border: 100px;
+    border-color: blueviolet;
+
+}
+
+
+.header {
+    grid-area: header;
+    background-color: aqua;
+}
+
+.navbar {
+    grid-area: navbar;
+    background-color: rgb(88, 118, 118);
+}
+
+.aside {
+    grid-area: aside;
+    background-color: rgb(118, 38, 193);
+}
+
+.article {
+    grid-area: article;
+    background-color: rgb(225, 113, 8);
+}
+
+.footer {
+    grid-area: footer;
+    background-color: rgb(13, 100, 52);
+}
+
+.contenedor {
+    display: grid;
+    gap: 5px;
+    grid-template: 
+        "header" 100px
+        "navbar" 100px
+        "article" auto
+        "aside" 100px
+        "footer" 100px;
+}
+/* media qeri*/
+@media (min-width: 600px){
+    .contenedor{
+        grid-template:
+        "header header" 100px
+        "navbar navbar" 100px
+        "aside article" auto
+        "footer footer" 100px 200px auto;
+           
+    }
+}
